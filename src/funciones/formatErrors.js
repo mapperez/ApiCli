@@ -1,6 +1,6 @@
 const formatErrors = (Generalerror,otherErrors) => {
 
-console.log(Generalerror)
+
 
   let objErrors = [];
   const listaErrores = Generalerror.errors;

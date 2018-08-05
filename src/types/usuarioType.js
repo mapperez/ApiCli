@@ -1,6 +1,6 @@
-import { GraphQLObjectType, GraphQLString , GraphQLID} from "graphql";
+import { GraphQLObjectType, GraphQLString , GraphQLID, GraphQLBoolean} from "graphql";
 import { GraphQLDateTime } from "../../node_modules/graphql-custom-types";
-import PerfilEnum from "./perfilEmun";
+
 
 
 
@@ -12,7 +12,8 @@ const UsuarioType = new GraphQLObjectType({
     nombre: { type: GraphQLString },
     email: { type: GraphQLString },
     pwd: { type: GraphQLString },
-    perfil: {type: PerfilEnum},
+    role: {type: GraphQLString},
+    activo: {type: GraphQLBoolean},
     createdAt: {type: GraphQLDateTime},
     updatedAt: {type: GraphQLDateTime}
   })

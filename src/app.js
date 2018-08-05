@@ -5,7 +5,6 @@ import { GraphQLSchema } from "graphql";
 import cors from "cors";
 
 // Modelos
-import auth from "./funciones/auth";
 import Models from "./models";
 import RootQueryType from "./resolvers/rootQuery";
 import MutationQueryType from "./resolvers/mutationQuery";
@@ -25,11 +24,11 @@ dotenv.config();
 
 // Applicacion principal
 const app = express();
-mongoose.connect("mongodb://localhost:27017/neomercado");
+mongoose.connect("mongodb://localhost:27017/gesclinica");
 //=========================================================
 
 //Middleware Autenticacion y Acceso 
-app.use(auth.checkHeaders);
+//app.use(auth.checkHeaders);
 //=========================================================
 
 //Cors

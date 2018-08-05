@@ -18,9 +18,9 @@ const usuarioSchema = new mongoose.Schema({
     type: String,
     required: [true, "La contraseña es requerida"]
   },
-  perfil: {
+  role: {
     type: String,
-    default: "Cliente"
+    default: "USER_ROLE"
   },
   activo: {
     type: Boolean,
